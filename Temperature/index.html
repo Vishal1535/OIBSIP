@@ -1,36 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Temperature Converter</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="card">
-      <h1>Temperature Converter</h1>
+  <main class="page">
 
-      <input
-        type="number"
-        id="temperature"
-        placeholder="Enter Temperature"
-      />
+    <div class="converter">
 
-      <select id="unit">
-        <option value="celsius">Celsius (°C)</option>
-        <option value="fahrenheit">Fahrenheit (°F)</option>
-      </select>
+      <!-- Header -->
+      <div class="header">
 
-      <button>Convert</button>
+        <div class="icon">
+          🌡️
+        </div>
 
-      <div class="result">
-        <h3>Converted Temperature</h3>
-        <p>0 °F</p>
+        <span>Temperature Tool</span>
+
+        <h1>Temperature Converter</h1>
+
+        <p>
+          Convert temperatures quickly and accurately.
+        </p>
+
       </div>
+
+
+      <!-- Input -->
+      <div class="input-section">
+
+        <label for="temperature">
+          Enter temperature
+        </label>
+
+        <div class="input-wrapper">
+
+          <input
+            type="number"
+            id="temperature"
+            placeholder="0"
+          >
+
+          <span>°</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Units -->
+      <div class="conversion">
+
+        <div class="unit">
+
+          <label for="fromUnit">
+            FROM
+          </label>
+
+          <select id="fromUnit">
+
+            <option value="celsius">
+              Celsius (°C)
+            </option>
+
+            <option value="fahrenheit">
+              Fahrenheit (°F)
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="arrow">
+          →
+        </div>
+
+
+        <div class="unit">
+
+          <label for="toUnit">
+            TO
+          </label>
+
+          <select id="toUnit">
+
+            <option value="fahrenheit">
+              Fahrenheit (°F)
+            </option>
+
+            <option value="celsius">
+              Celsius (°C)
+            </option>
+
+            <option value="kelvin">
+              Kelvin (K)
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- Button -->
+      <button id="convertBtn">
+        Convert Temperature
+        <span>→</span>
+      </button>
+
+
+      <!-- Result -->
+      <div class="result">
+
+        <span>CONVERTED TEMPERATURE</span>
+
+        <div class="result-number">
+          <h2 id="result">0</h2>
+        </div>
+
+      </div>
+
+
+      <!-- Bottom -->
+      <div class="bottom-text">
+        <span>°C</span>
+        <span>°F</span>
+        <span>K</span>
+      </div>
+
     </div>
-  </div>
+
+  </main>
 
 </body>
 </html>
